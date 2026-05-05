@@ -1,5 +1,5 @@
 from sqlalchemy import Column, Integer, String, create_engine
-from sqlalchemy.orm import sessionmaker, Declarative_base
+from sqlalchemy.orm import sessionmaker, DeclarativeBase
 from dotenv import load_dotenv
 import os
 
@@ -12,7 +12,7 @@ engine = create_engine(
 
 Session = sessionmaker(autocomit=False, autoflush=False, bind=engine)
 
-class Base(Declarative_base):
+class Base(DeclarativeBase):
     pass
 
 def get_db():
