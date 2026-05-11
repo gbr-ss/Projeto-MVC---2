@@ -10,7 +10,7 @@ engine = create_engine(
     connect_args={"check_same_thread": False} #Coisa so para o Sqlite carregar outros negocios 👍
 )
 
-Session = sessionmaker(autocomit=False, autoflush=False, bind=engine)
+Session = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 
 class Base(DeclarativeBase):
     pass

@@ -71,8 +71,7 @@ def get_usuario_logado(request: Request):
             )
     
 
-def get_usario_opcional(request: Request):
-
+def get_usuario_opcional(request: Request):
     try:
         return get_usuario_logado(request)
     except HTTPException:
